@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baron Weather - Live Forecast</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>⛅ Baron Weather</h1>
+    <p class="sub">Live API • 7-Day Forecast • Arrowstack Task 2</p>
+  </header>
+  <div class="search-box">
+    <input type="text" id="cityInput" placeholder="Enter city... e.g. Kampala" value="Kampala">
+    <button id="searchBtn">Search</button>
+    <button id="locBtn">📍</button>
+  </div>
+  <div id="loader" class="hidden">Loading live weather...</div>
+  <div id="error" class="hidden"></div>
+  <div id="weatherCard" class="card hidden">
+    <div class="current">
+      <div>
+        <h2 id="cityName">Kampala</h2>
+        <p id="dateTime"></p>
+        <div class="temp-row">
+          <span id="temp">--°</span>
+          <span id="wIcon" class="w-icon">⛅</span>
+        </div>
+        <p id="desc">--</p>
+      </div>
+      <div class="stats">
+        <div><span>💧 Humidity</span><b id="humidity">--%</b></div>
+        <div><span>💨 Wind</span><b id="wind">-- km/h</b></div>
+        <div><span>🌡️ Feels Like</span><b id="feels">--°</b></div>
+        <div><span>🌅 Condition</span><b id="condition">--</b></div>
+      </div>
+    </div>
+  </div>
+  <div id="forecast" class="forecast hidden">
+    <h3>7-Day Forecast</h3>
+    <div id="forecastGrid" class="grid"></div>
+  </div>
+  <footer>
+    <p>Built by <b>Baron Mucurezi</b> | Data: Open-Meteo Free API | Arrowstack Task 2</p>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
